@@ -1,24 +1,34 @@
-//
-//  ContentView.swift
-//  SimpleMapLocation
-//
-//  Created by Kentaro Mihara on 2023/11/01.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel: ViewModel
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        VStack(spacing: 16) {
+            HStack(spacing: 16) {
+                Button("request") {
+                    viewModel.requestAuthorization()
+                }
+                Button("start") {
+                    viewModel.startTracking()
+                }
+                Button("stop") {
+                    viewModel.stopTracking()
+                }
+            }
+            Text(viewModel.authorizationStatus.description)
+            Text(String(format: "longitude: %f", viewModel.longitude))
+            Text(String(format: "latitude: %f", viewModel.latitude))
+        }.onAppear {
+            viewModel.activate()
+        }.onDisappear {
+            viewModel.deactivate()
         }
-        .padding()
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static let viewModel = ViewModel(model: LocationDataSource())
+    static var previews: some View {
+        ContentView(viewModel: viewModel)
+    }
 }

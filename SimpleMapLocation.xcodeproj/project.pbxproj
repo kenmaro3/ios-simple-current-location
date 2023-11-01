@@ -11,6 +11,9 @@
 		0AB90B422AF1D49400CA9450 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB90B412AF1D49400CA9450 /* ContentView.swift */; };
 		0AB90B442AF1D49500CA9450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AB90B432AF1D49500CA9450 /* Assets.xcassets */; };
 		0AB90B472AF1D49500CA9450 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AB90B462AF1D49500CA9450 /* Preview Assets.xcassets */; };
+		0AB90B4E2AF1D51300CA9450 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB90B4D2AF1D51300CA9450 /* Extension.swift */; };
+		0AB90B502AF1D54400CA9450 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB90B4F2AF1D54400CA9450 /* ViewModel.swift */; };
+		0AB90B522AF1D55400CA9450 /* LocationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB90B512AF1D55400CA9450 /* LocationDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		0AB90B412AF1D49400CA9450 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0AB90B432AF1D49500CA9450 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AB90B462AF1D49500CA9450 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0AB90B4D2AF1D51300CA9450 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		0AB90B4F2AF1D54400CA9450 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		0AB90B512AF1D55400CA9450 /* LocationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,9 @@
 				0AB90B412AF1D49400CA9450 /* ContentView.swift */,
 				0AB90B432AF1D49500CA9450 /* Assets.xcassets */,
 				0AB90B452AF1D49500CA9450 /* Preview Content */,
+				0AB90B4D2AF1D51300CA9450 /* Extension.swift */,
+				0AB90B4F2AF1D54400CA9450 /* ViewModel.swift */,
+				0AB90B512AF1D55400CA9450 /* LocationDataSource.swift */,
 			);
 			path = SimpleMapLocation;
 			sourceTree = "<group>";
@@ -137,7 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AB90B4E2AF1D51300CA9450 /* Extension.swift in Sources */,
+				0AB90B522AF1D55400CA9450 /* LocationDataSource.swift in Sources */,
 				0AB90B422AF1D49400CA9450 /* ContentView.swift in Sources */,
+				0AB90B502AF1D54400CA9450 /* ViewModel.swift in Sources */,
 				0AB90B402AF1D49400CA9450 /* SimpleMapLocationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +287,7 @@
 				DEVELOPMENT_TEAM = B4C7245FA7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow app to use your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +317,7 @@
 				DEVELOPMENT_TEAM = B4C7245FA7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow app to use your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
